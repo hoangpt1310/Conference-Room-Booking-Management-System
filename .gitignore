@@ -13,3 +13,5 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+app/secrets/oauth/oauth-private.key
+app/secrets/oauth/oauth-public.key

@@ -12,16 +12,6 @@ const mix = require("laravel-mix");
 mix.js("resources/js/app.js", "public/js")
     .postCss("resources/css/app.css", "public/css", [require("tailwindcss")])
     .copy('resources/images', 'public/images')
-    .browserSync({
-        proxy: "localhost:8000",
-        port: 3000, // Thay đổi cổng thành 3000
-        files: [
-            "app/**/*.php",
-            "resources/views/**/*.php",
-            "public/js/**/*.js",
-            "public/css/**/*.css",
-        ],
-    })
     .vue()
     .version()
     .disableSuccessNotifications();

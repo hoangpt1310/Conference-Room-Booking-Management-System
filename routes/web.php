@@ -12,17 +12,23 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-/**
- * Routes for user
- * @controller
- */
-Route::get('/', function () {
-    return view('user.pages.list');
-});
-/**
- * Routes for admin
- * @controller
- */
-Route::get('/admin', function () {
-    return view('admin.pages.list');
-});
+//Route::get('/',[\App\Http\Controllers\Api\user\HomeUserController::class, 'index']);
+//
+//Route::get('/about',[\App\Http\Controllers\Api\user\HomeUserController::class, 'about']);
+//
+//
+//Route::get('/{any}', [\App\Http\Controllers\SinglePageController::class,'index'])->where('any', '.*');
+//
+//Route::prefix('api')->group(function (){
+//});
+//
+//Route::prefix('user')->group(function (){
+//
+//});
+
+//Route::get('/{any}', function () {
+//    return view('user.layout_user');
+//})->where('any', '.*');
+
+Route::view('/{any?}', 'user.layout_user')->where('any', '.*');
+
